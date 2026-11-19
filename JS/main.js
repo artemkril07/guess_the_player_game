@@ -50,7 +50,6 @@ clueBtn.addEventListener("click", () => {
     const player = generatePlayer();
     generateClue(player);
     splitWords = generateSplitWord(player);
-    console.log(player);
   }
 });
 
