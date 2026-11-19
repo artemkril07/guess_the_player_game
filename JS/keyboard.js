@@ -40,6 +40,7 @@ document.addEventListener("keydown", (e) => {
       keyboard.classList.add("right_letters");
       if (letters.every((item) => item.textContent !== "")) {
         winTheGame();
+        index_id =1;
       }
     } else {
       const heart = document.querySelector(
