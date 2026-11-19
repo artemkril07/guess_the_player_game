@@ -10,7 +10,7 @@ export const players = [
     { name: "XHAKA", clue: "Півзахисник Bayer Leverkusen та збірної Швейцарії" },
     { name: "SILVA", clue: "Зірковий португальський півзахисник (Manchester City)" },
     { name: "JESUS", clue: "Нападник Arsenal та збірної Бразилії" },
-    { name: "BRUNO", clue: "Капітан Manchester United (Бруну)" },
+    { name: "BRUNO", clue: "Капітан Manchester United" },
     { name: "KANTE", clue: "Французький опорний півзахисник" },
     { name: "RODRI", clue: "Володар Золотого м'яча, Manchester City" },
     { name: "VARDY", clue: "Легенда та бомбардир Leicester City" },

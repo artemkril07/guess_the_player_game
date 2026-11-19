@@ -8,6 +8,9 @@ const keyArrays = [
 
 const keyboardSection = document.querySelector(".section_keyboard");
 const letterContainer = document.querySelectorAll(".letter");
+const letters = Array.from(letterContainer);
+const clueContainer = document.querySelector(".clue_container");
+
 let index_id = 1;
 
 export const createKeyboard = () => {
@@ -25,11 +28,10 @@ export const createKeyboard = () => {
 };
 
 document.addEventListener("keydown", (e) => {
-  if (isGameOn) {
+  if (isGameOn && clueContainer.textContent !== "") {
     const upperLetter = e.key.toUpperCase();
 
     if (upperLetter.length <= 1) {
-      const letters = Array.from(letterContainer);
       const keyboard = document.querySelector(
         `.keyboard_letters[data-value='${upperLetter}']`,
       );
@@ -62,6 +64,37 @@ document.addEventListener("keydown", (e) => {
 
 keyboardSection.addEventListener("click", (e) => {
   if (e.target.closest(".keyboard_letters") !== null) {
-    const div = e.target.closest(".keyboard_letters");
+    if (isGameOn && clueContainer.textContent !== "") {
+      const div = e.target.closest(".keyboard_letters");
+      const letter = div.dataset.value;
+      const keyboard = document.querySelector(
+        `.keyboard_letters[data-value='${letter}']`,
+      );
+
+      splitWords.forEach((item, index) => {
+        if (item === letter) {
+          letters[index].textContent = letter;
+        }
+      });
+
+      if (splitWords.some((elem) => elem === letter)) {
+        keyboard.classList.add("right_letters");
+        if (letters.every((item) => item.textContent !== "")) {
+          winTheGame();
+          index_id = 1;
+        }
+      } else {
+        const heart = document.querySelector(
+          `.heart_icon[data-id="${index_id}"]`,
+        );
+        keyboard.classList.add("wrong_letters");
+        heart.classList.add("gray_heart");
+        index_id++;
+        if (index_id === 5) {
+          endGame();
+          index_id = 1;
+        }
+      }
+    }
   }
 });
