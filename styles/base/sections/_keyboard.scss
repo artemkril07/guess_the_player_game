@@ -1,0 +1,46 @@
+.section_keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 0.5rem 2.5rem 0.5rem;
+}
+
+.keyboard_rows {
+  display: flex;
+  justify-content: center;
+  gap: 0.2rem;
+  flex: 1;
+  width: 100%;
+  max-width: 500px;
+}
+
+.keyboard_letters {
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  background-color: aquamarine;
+  color: brown;
+  font-family: "PrimaryGame";
+  text-align: center;
+  padding: 0.2rem;
+  font-size: 1.5rem;
+  flex: 1;
+  box-shadow: 1px 1px;
+  cursor: pointer;
+}
+
+.wrong_letters{
+  background-color: rgb(100, 98, 98);
+  color: rgb(155, 146, 146);
+}
+
+.right_letters{
+  background-color: rgb(7, 150, 43);
+  color: rgb(118, 185, 79);
+}

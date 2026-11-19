@@ -1,0 +1,28 @@
+body{
+    font-family: "PrimaryText";
+    font-size: 1rem;
+    background-color: rgba(120, 186, 212, 0.658);
+;
+}
+svg{
+    width: 30px;
+    height: 30px;
+    fill: red;
+}
+image{
+    object-fit: cover;
+}
+
+.container{
+    max-width: 1280px;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+.btn{
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-family: "PrimaryGame";
+    font-size: 1rem;
+    border: none;
+}
