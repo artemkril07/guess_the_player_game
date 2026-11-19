@@ -29,7 +29,6 @@ document.addEventListener("keydown", (e) => {
     const upperLetter = e.key.toUpperCase();
 
     if (upperLetter.length <= 1) {
-      console.log(upperLetter);
       const letters = Array.from(letterContainer);
       const keyboard = document.querySelector(
         `.keyboard_letters[data-value='${upperLetter}']`,
