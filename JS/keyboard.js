@@ -26,32 +26,36 @@ export const createKeyboard = () => {
 
 document.addEventListener("keydown", (e) => {
   if (isGameOn) {
-    const letters = Array.from(letterContainer);
     const upperLetter = e.key.toUpperCase();
-    const keyboard = document.querySelector(
-      `.keyboard_letters[data-value='${upperLetter}']`,
-    );
-    splitWords.forEach((item, index) => {
-      if (item === upperLetter) {
-        letters[index].textContent = upperLetter;
-      }
-    });
-    if (splitWords.some((elem) => elem === upperLetter)) {
-      keyboard.classList.add("right_letters");
-      if (letters.every((item) => item.textContent !== "")) {
-        winTheGame();
-        index_id =1;
-      }
-    } else {
-      const heart = document.querySelector(
-        `.heart_icon[data-id="${index_id}"]`,
+
+    if (upperLetter.length <= 1) {
+      console.log(upperLetter);
+      const letters = Array.from(letterContainer);
+      const keyboard = document.querySelector(
+        `.keyboard_letters[data-value='${upperLetter}']`,
       );
-      keyboard.classList.add("wrong_letters");
-      heart.classList.add("gray_heart");
-      index_id++;
-      if (index_id === 5) {
-        endGame();
-        index_id = 1;
+      splitWords.forEach((item, index) => {
+        if (item === upperLetter) {
+          letters[index].textContent = upperLetter;
+        }
+      });
+      if (splitWords.some((elem) => elem === upperLetter)) {
+        keyboard.classList.add("right_letters");
+        if (letters.every((item) => item.textContent !== "")) {
+          winTheGame();
+          index_id = 1;
+        }
+      } else {
+        const heart = document.querySelector(
+          `.heart_icon[data-id="${index_id}"]`,
+        );
+        keyboard.classList.add("wrong_letters");
+        heart.classList.add("gray_heart");
+        index_id++;
+        if (index_id === 5) {
+          endGame();
+          index_id = 1;
+        }
       }
     }
   }

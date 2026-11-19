@@ -38,10 +38,11 @@ const startGame = () => {
 startGame();
 
 export const generatePlayer = () => {
-  const randomIndex = Math.floor(Math.random() * (30 - 0 + 1) + 0);
+  const randomIndex = Math.floor(Math.random() * (30 - 0) + 0);
   const myPlayer = players[randomIndex];
   myPlayerObj.clue = myPlayer.clue;
   myPlayerObj.name = myPlayer.name;
+  console.log(randomIndex);
   return myPlayerObj;
 };
 
@@ -50,6 +51,7 @@ clueBtn.addEventListener("click", () => {
     const player = generatePlayer();
     generateClue(player);
     splitWords = generateSplitWord(player);
+    console.log(player);    
   }
 });
 
