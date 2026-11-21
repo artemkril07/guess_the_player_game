@@ -9,5 +9,8 @@
 <symbol id="icon-checkmark" viewBox="0 0 32 32">
 <path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"></path>
 </symbol>
+<symbol id="icon-ask" viewBox="0 0 32 32">
+<path d="M10 24h4v4h-4v-4zM10 4v4h8v4h-8v8h4v-4h8v-12h-12z"></path>
+</symbol>
 </defs>
 </svg>

@@ -1,0 +1,11 @@
+@import "./variables";
+
+$bp-mobile: 260px;
+$bp-tablet: 800px;
+$bp-desktop: 1024px;
+
+@mixin mobile {
+  @media (max-width: $bp-mobile) {
+    @content;
+  }
+}

@@ -1,3 +1,6 @@
+@import "./base/variables";
+@import "./base/mixins";
+
 @import "./base/reset.scss";
 @import "./base/fonts.scss";
 
@@ -5,9 +8,10 @@
 
 @import "./base/header";
 
-
 @import "./base/sections/hearts";
+@import "./base/sections/help";
 @import "./base/sections/letters";
 @import "./base/sections/clue";
 @import "./base/sections/keyboard";
 @import "./base/sections/backdrop";
+@import "./base/sections/modal-rules";

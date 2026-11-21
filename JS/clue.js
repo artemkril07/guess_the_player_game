@@ -1,12 +1,13 @@
 
 const clueContainer = document.querySelector(".clue_container");
 
-export const generateClue = (player) => {
-  clueContainer.textContent = player.clue;
-  
+export const makeClue = (player) => {
+  clueContainer.style.display = "block";
+  clueContainer.textContent = player.clue; 
+
 };
 
-export const generateSplitWord = (player) => {
+export const makeSplitWord = (player) => {
   const splitWord = player.name.split("");
   return splitWord
 };
