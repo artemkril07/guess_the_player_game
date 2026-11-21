@@ -1,11 +1,50 @@
-.section_clue{
-    padding: 2rem 0 0 0;
+@use "../mixins" as m;
+
+.section_clue {
+  padding: 2rem 0 0 0;
 }
 
-.clue_btn{
-    font-family: "PrimaryGame";
-    font-size: 1rem;
-    border: 1px solid rgb(190, 190, 2);
-    background-color: yellow;
-    box-shadow: 1px 1px 2px gray;
+.clue_btn {
+  font-family: "PrimaryGame";
+  font-size: 1rem;
+  border: 1px solid rgb(190, 190, 2);
+  background-color: yellow;
+  box-shadow: 1px 1px 2px gray;
+}
+
+.clue_container {
+  display: none;
+  font-family: "PrimaryGame";
+  background-color: aquamarine;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  color: brown;
+  box-shadow: 1px 1px 0.5rem #3e8587;
+
+    @include m.mobile {
+    font-size: 0.8rem;
+  }
+}
+
+.clue_points_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  @include m.mobile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.points {
+  font-family: "PrimaryGame";
+  text-transform: uppercase;
+  font-size: 1.5rem;
+   @include m.mobile {
+    padding-left: 5px;
+    font-size: 1.2rem;
+  }
 }

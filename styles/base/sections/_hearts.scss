@@ -1,13 +1,29 @@
-.hearts{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-.section_hearts{
-    padding: 1rem 1rem;
+@use "../mixins" as m;
+
+.hearts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  @include m.mobile {
+    gap: 0.5rem;
+  }
 }
 
-.gray_heart{
-    fill: gray;
+.section_hearts {
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.heart_icon {
+  fill: red;
+  width: clamp(30px, 10vw, 45px);
+  max-height: 50px;
+  min-width: 0;
+}
+
+.gray_heart {
+  fill: gray;
 }

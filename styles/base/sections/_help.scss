@@ -1,0 +1,19 @@
+.section_help {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ask_icon {
+  fill: rgba(50, 59, 63, 0.582);
+  border-radius: 0.3rem;
+  box-shadow: 2px 2px 0.3rem #3e8487de;
+  width: 35px;
+  height: 35px;
+}
+
+
+.help_button {
+  background-color: transparent;
+  border: none;
+}

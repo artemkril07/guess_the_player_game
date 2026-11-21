@@ -4,18 +4,18 @@ body{
     background-color: rgba(120, 186, 212, 0.658);
 ;
 }
-svg{
-    width: 30px;
-    height: 30px;
-    fill: red;
-}
 image{
     object-fit: cover;
 }
 
 .container{
     max-width: 1280px;
-    padding: 0 2rem;
+    padding: 0 0.5rem;
+    margin: 0 auto;
+}
+
+.inner_container{
+    max-width: 500px;
     margin: 0 auto;
 }
 

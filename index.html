@@ -15,7 +15,7 @@
     </header>
     <div class="container">
       <main>
-        <section class="section_hearts">
+        <section class="section_hearts inner_container">
           <div class="hearts">
             <svg class="heart_icon" data-id="1">
               <use href="./icons/symbol-defs.svg#icon-heart" />
@@ -29,20 +29,37 @@
             <svg class="heart_icon" data-id="4">
               <use href="./icons/symbol-defs.svg#icon-heart" />
             </svg>
+            <svg class="heart_icon" data-id="5">
+              <use href="./icons/symbol-defs.svg#icon-heart" />
+            </svg>
+          </div>
+          <div class="section_help">
+            <button class="help_button">
+              <svg class="ask_icon">
+                <use href="./icons/symbol-defs.svg#icon-ask" />
+              </svg>
+            </button>
           </div>
         </section>
         <section class="section_letters">
-          <div class="letters_container">
-            <div class="letter"></div>
-            <div class="letter"></div>
-            <div class="letter"></div>
-            <div class="letter"></div>
-            <div class="letter"></div>
+          <div class="inner_container">
+            <div class="letters_container">
+              <div class="letter"></div>
+              <div class="letter"></div>
+              <div class="letter"></div>
+              <div class="letter"></div>
+              <div class="letter"></div>
+            </div>
           </div>
         </section>
         <section class="section_clue">
-          <button class="clue_btn btn">Get a clue</button>
-          <div class="clue_container"></div>
+          <div class="inner_container">
+            <div class="clue_points_container">
+              <button class="clue_btn btn">Get a clue</button>
+              <div class="points"></div>
+            </div>
+            <div class="clue_container"></div>
+          </div>
         </section>
         <section class="section_keyboard"></section>
       </main>
@@ -55,10 +72,57 @@
       <div class="backdrop-win visually-hidden">
         <div class="backdrop-win_container">
           <h2 class="backdrop-win_title">
-            Congratulations!
-            You've won the game!
+            Congratulations! You've won the game!
           </h2>
-          <button type="submit" class="backdrop-win_btn"> Try another</button>
+          <button type="submit" class="backdrop-win_btn">Try another</button>
+        </div>
+      </div>
+      <div class="backdrop-rules visually-hidden">
+        <div class="modal_rules_container">
+          <h2 class="modal-rules_title">Правила гри!</h2>
+          <ul class="modal_rules_list">
+            <li class="rules_item">
+              <p class="rules_text">
+                Мета гри: набрати якомога більше очок та побити свій рекорд. Гра
+                триває до першої поразки.
+              </p>
+            </li>
+            <li class="rules_item">
+              <p class="rules_text">
+                Вгадування без підказки: Чистий прохід без втрачених сердечок —
+                50 балів.
+              </p>
+            </li>
+            <li class="rules_item">
+              <p class="rules_text">
+                Якщо були втрачені сердечка — теж нагорода без підказки (менше
+                за 50, але вище за варіант із підказкою).
+              </p>
+            </li>
+            <li class="rules_item">
+              <p class="rules_text">
+                Якщо береш підказку з самого початку — життів не знімає,
+                вмикається 10-бальна система.
+              </p>
+            </li>
+            <li class="rules_item">
+              <p class="rules_text">
+                Якщо вирішив узяти підказку вже після початку спроб — підказка
+                знімає 1 сердечко, а далі гра рахується за звичайною логікою
+                підказки.
+              </p>
+            </li>
+            <li class="rules_item">
+              <p class="rules_text">
+                Поразка: якщо втрачаєш усі життя й не вгадуєш футболіста — гра
+                закінчується, поточний рахунок обнуляється до 0 очок, а кращий
+                рекорд залишається збереженим.
+              </p>
+            </li>
+          </ul>
+          <div class="modal_rules_container_button">
+            <button class="modal_rules_btn">Зрозуміло</button>
+          </div>
         </div>
       </div>
     </div>

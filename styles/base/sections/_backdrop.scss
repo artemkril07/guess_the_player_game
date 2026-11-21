@@ -1,4 +1,5 @@
-.backdrop, .backdrop-win {
+.backdrop,
+.backdrop-win {
   position: absolute;
   top: 0;
   left: 0;
@@ -20,7 +21,8 @@
   overflow: hidden;
 }
 
-.backdrop_container, .backdrop-win_container {
+.backdrop_container,
+.backdrop-win_container {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -28,16 +30,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
-.backdrop_title, .backdrop-win_title {
-  font-size: 2rem;
+.backdrop_title,
+.backdrop-win_title {
+  font-size: 1.5rem;
   font-family: "PrimaryGame";
   text-transform: uppercase;
   text-align: center;
 }
 
-.backdrop_btn, .backdrop-win_btn {
+.backdrop_btn,
+.backdrop-win_btn {
   padding: 0.8rem;
   margin-top: 2rem;
   border-radius: 0.5rem;
