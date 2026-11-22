@@ -7,8 +7,8 @@ const clueBtn = document.querySelector(".clue_btn");
 const clueContainer = document.querySelector(".clue_container");
 const backdrop = document.querySelector(".backdrop");
 const backdropBtn = document.querySelector(".backdrop_btn");
-const backdropWin = document.querySelector(".backdrop-win");
-const backdropBtnWin = document.querySelector(".backdrop-win_btn");
+const nextSection = document.querySelector(".next_wrapper");
+const nextBtnWin = document.querySelector(".next_btn");
 const heartsNode = document.querySelectorAll(".heart_icon");
 const letterContainer = document.querySelectorAll(".letter");
 
@@ -41,7 +41,7 @@ const startGame = () => {
   renderPoints();
   myPlayerObj = generateRandomPlayerObj();
   backdrop.classList.add("visually-hidden");
-  backdropWin.classList.add("visually-hidden");
+  nextSection.classList.add("visually-hidden");
   hearts.forEach((item) => item.classList.remove("gray_heart"));
   splitWords = makeSplitWord(myPlayerObj);
   clueContainer.textContent = "";
@@ -63,9 +63,9 @@ export const endGame = () => {
   backdropBtn.addEventListener("click", startGame);
 };
 
-export const winTheGame = () => {
-  backdropWin.classList.remove("visually-hidden");
-  backdropBtnWin.addEventListener("click", startGame);
+export const winTheRound = () => {
+  nextSection.classList.remove("visually-hidden");
+  nextBtnWin.addEventListener("click", startGame);
 };
 
 const toggleRules = () => {

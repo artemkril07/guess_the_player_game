@@ -1,0 +1,23 @@
+.next_wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.next_btn {
+  margin-top: 1rem;
+  font-family: "PrimaryGame";
+  padding: 0.25rem 1rem;
+  font-size: 1rem;
+  border: 1px solid rgb(190, 190, 2);
+  border-radius: 0.5rem;
+  background-color: yellow;
+  box-shadow: 1px 1px 2px gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next_icon {
+  width: 25px;
+  height: 25px;
+}

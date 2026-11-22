@@ -1,11 +1,16 @@
 @import "./variables";
 
-$bp-mobile: 260px;
+$bp-mobile: 375px;
 $bp-tablet: 800px;
 $bp-desktop: 1024px;
 
-@mixin mobile {
+@mixin mobileTo {
   @media (max-width: $bp-mobile) {
+    @content;
+  }
+}
+@mixin mobileFrom {
+  @media (min-width: $bp-mobile) {
     @content;
   }
 }

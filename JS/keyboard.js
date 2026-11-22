@@ -1,4 +1,4 @@
-import { splitWords, endGame, isGameOn, winTheGame } from "./main.js";
+import { splitWords, endGame, isGameOn, winTheRound } from "./main.js";
 import { scorePoints } from "./points.js";
 
 const keyArrays = [
@@ -9,6 +9,9 @@ const keyArrays = [
 
 const keyboardSection = document.querySelector(".section_keyboard");
 const letterContainer = document.querySelectorAll(".letter");
+const heartsNode = document.querySelectorAll(".heart_icon");
+const clueContainer = document.querySelector(".clue_container");
+const hearts = Array.from(heartsNode)
 const letters = Array.from(letterContainer);
 
 let index_id = 1;
@@ -36,15 +39,15 @@ const fillTheLetters = (array, letter) => {
 };
 
 const clickLetter = (array, letter, keyboard) => {
+  const heart = document.querySelector(`.heart_icon[data-id="${index_id}"]`);
   if (array.some((elem) => elem === letter)) {
     keyboard.classList.add("right_letters");
     if (letters.every((item) => item.textContent !== "")) {
-      scorePoints()
-      winTheGame();
+      scorePoints(hearts, clueContainer);
+      winTheRound();
       index_id = 1;
     }
   } else {
-    const heart = document.querySelector(`.heart_icon[data-id="${index_id}"]`);
     if (keyboard !== null) {
       keyboard.classList.add("wrong_letters");
       heart.classList.add("gray_heart");

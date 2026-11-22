@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guess the player game</title>
+    <title>Вгадай футболіста</title>
     <link rel="stylesheet" href="styles/main.min.css" />
   </head>
   <body>
@@ -11,7 +11,7 @@
       <nav>
         <div class="logo"></div>
       </nav>
-      <h1 class="hero_title">Guess the player</h1>
+      <h1 class="hero_title">Вгадай футболіста</h1>
     </header>
     <div class="container">
       <main>
@@ -55,10 +55,17 @@
         <section class="section_clue">
           <div class="inner_container">
             <div class="clue_points_container">
-              <button class="clue_btn btn">Get a clue</button>
+              <button class="clue_btn btn">Підказка</button>
               <div class="points"></div>
             </div>
             <div class="clue_container"></div>
+           <div class="next_wrapper visually-hidden">
+             <button class="next_btn">Далі 
+              <svg class="next_icon">
+                <use href="./icons/symbol-defs.svg#icon-arrow-right-thick"/>
+              </svg>
+            </button>
+           </div>
           </div>
         </section>
         <section class="section_keyboard"></section>
@@ -69,54 +76,29 @@
           <button type="submit" class="backdrop_btn">Play again</button>
         </div>
       </div>
-      <div class="backdrop-win visually-hidden">
-        <div class="backdrop-win_container">
-          <h2 class="backdrop-win_title">
-            Congratulations! You've won the game!
-          </h2>
-          <button type="submit" class="backdrop-win_btn">Try another</button>
-        </div>
-      </div>
       <div class="backdrop-rules visually-hidden">
         <div class="modal_rules_container">
           <h2 class="modal-rules_title">Правила гри!</h2>
           <ul class="modal_rules_list">
             <li class="rules_item">
               <p class="rules_text">
-                Мета гри: набрати якомога більше очок та побити свій рекорд. Гра
-                триває до першої поразки.
+                Поки усіх футболістів потрібно відгадувати англійською мовою.
               </p>
             </li>
             <li class="rules_item">
               <p class="rules_text">
-                Вгадування без підказки: Чистий прохід без втрачених сердечок —
-                50 балів.
+                З підказкою ваші (життя які залишились) червоні серця множаться на 2.
               </p>
             </li>
             <li class="rules_item">
               <p class="rules_text">
-                Якщо були втрачені сердечка — теж нагорода без підказки (менше
-                за 50, але вище за варіант із підказкою).
-              </p>
-            </li>
-            <li class="rules_item">
-              <p class="rules_text">
-                Якщо береш підказку з самого початку — життів не знімає,
-                вмикається 10-бальна система.
-              </p>
-            </li>
-            <li class="rules_item">
-              <p class="rules_text">
-                Якщо вирішив узяти підказку вже після початку спроб — підказка
-                знімає 1 сердечко, а далі гра рахується за звичайною логікою
-                підказки.
+                Без підказки ваші (життя які залишились) червоні серця множаться на 3.
               </p>
             </li>
             <li class="rules_item">
               <p class="rules_text">
                 Поразка: якщо втрачаєш усі життя й не вгадуєш футболіста — гра
-                закінчується, поточний рахунок обнуляється до 0 очок, а кращий
-                рекорд залишається збереженим.
+                закінчується, поточний рахунок обнуляється до 0 очок.
               </p>
             </li>
           </ul>
@@ -126,7 +108,9 @@
         </div>
       </div>
     </div>
-    <footer></footer>
+    <footer>
+
+    </footer>
 
     <script src="./JS/main.js" type="module"></script>
   </body>

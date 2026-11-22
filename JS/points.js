@@ -1,33 +1,29 @@
-
-
-const firstHeart = document.querySelector(".heart_icon[data-id='1']");
-const clueContainer = document.querySelector(".clue_container");
-
 let points = 0;
 
+const getPoints = () => {
+  return points;
+};
 
 export const renderPoints = () => {
   const pointsCounter = document.querySelector(".points");
-  pointsCounter.textContent = `Points: ${points}`;
+  if (!pointsCounter) return;
+  pointsCounter.textContent = `Очки: ${points}`;
 };
 
-export const scorePoints = () => {
-  if (
-    !firstHeart.classList.contains("gray_heart") &&
-    clueContainer.textContent === ""
-  ) {
-    points +=50;
-  } else if (
-    !firstHeart.classList.contains("gray_heart") &&
-    clueContainer.textContent !== ""    
-    
-) {
-    points +=10;
-  }
+export const scorePoints = (activeHearts, clue) => {
+  let operator = clue?.textContent !== "" ? 2 : 3;
+  countPoints(operator, activeHearts);
   renderPoints();
 };
 
-export const resetPoints = ()=>{
-    points = 0;
-    renderPoints();
-}
+export const resetPoints = () => {
+  points = 0;
+  renderPoints();
+};
+
+const countPoints = (operator, activeHearts) => {
+  const heartsLeft = activeHearts.filter(
+    (item) => !item.classList.contains("gray_heart"),
+  );
+  points += operator * heartsLeft.length;
+};

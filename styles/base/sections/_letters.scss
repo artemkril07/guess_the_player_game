@@ -1,5 +1,7 @@
+@use "../mixins" as m;
+
 .section_letters {
-  padding: 3rem 0 0 0;
+  padding: 1rem 0 0 0;
 }
 
 .letters_container {
@@ -17,5 +19,5 @@
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-    box-shadow: 1px 1px #3e8587;
+  box-shadow: 1px 1px #3e8587;
 }
